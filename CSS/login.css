@@ -1,0 +1,29 @@
+.login-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.login_header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.login_header img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.login_header h1 {
+    columns: #333;
+    font-size: 1.5em;
+}
+
+.login_input {
+    border: solid 2px #333;
+}
