@@ -15,6 +15,7 @@
     position: relative;
     transition: all 600ms ease-in;
     transform-style: preserve-3d ;
+    border: #f83939 solid 4px;
 }
 
 .face{
@@ -27,12 +28,11 @@
 
 .front{
     background-image: url('../images/teste.png');
+    transform: rotateY(180deg);
 }
 
 .back{
     background-image: url('../images/verso.png');
-    background-size: contain;
-    background-position: center;
     backface-visibility: hidden;
 }   
 
