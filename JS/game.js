@@ -1,6 +1,6 @@
 const grid = document.querySelector('.grid');
 
-const cards = [
+const verbos = [
 
     'oid',
     'traigan',
@@ -11,10 +11,9 @@ const cards = [
     'seguid',
     'siente',
     'conduzca',
-    'elijja',
-    'destruye';
-
-]
+    'elija',
+    'destruye',
+];
 
 const create_element = (tag, className) => {
 
@@ -25,11 +24,13 @@ const create_element = (tag, className) => {
 }
 
 
-const create_card = () => {
+const create_card = (verbo) => {
 
     const card = create_element('div', 'card');
     const front = create_element('div', 'face front');
-    const back = create_card('div', 'face back');
+    const back = create_element('div', 'face back');
+
+    front.style.backgroundImage = `url('../images/${verbo}.png')`;
 
     card.appendChild(front);
     card.appendChild(back);
@@ -41,7 +42,14 @@ const create_card = () => {
 
 const load_game = () => {
 
-    cards.forEach(() => );
+    verbos.forEach((verbo) => {
+
+        const card = create_card(verbo);
+        grid.appendChild(card);
+
+    });
 
 }
+
+load_game();
 
