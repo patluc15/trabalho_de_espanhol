@@ -24,6 +24,7 @@
     position: absolute;
     background-size: contain ;
     background-position: center;
+    transition: all 400ms ease;
 }
 
 .front{
@@ -35,6 +36,11 @@
     backface-visibility: hidden;
 }   
 
-.card:hover{
-    transform: rotateY(180deg);
+.reveal-card{
+    transform: rotateY(180deg);    
+}
+
+.disabled-card{
+    filter: saturate(0);
+    opacity: 0.5;
 }
