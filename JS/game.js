@@ -1,4 +1,8 @@
+const span_player = document.querySelector('.player');
+
 const grid = document.querySelector('.grid');
+
+const timer = document.querySelector('.timer');
 
 const verbos = [
 
@@ -42,7 +46,9 @@ const check_endgame = () => {
     const disabled_cards = document.querySelectorAll('.disabled-card');
 
     if (disabled_cards.length == 22){
-        alert('Parabéns, voccê completou o jogo');
+        clearInterval(this.loop);
+        alert(`Felicitaciones,, ${span_player.innerHTML} ! Tu tiempo ha pasado: ${timer.innerHTML} `);
+
     }
 
 }
@@ -138,6 +144,27 @@ const load_game = () => {
 
 }
 
-load_game();
+const start_timer = () => {
+
+    this.loop = setInterval(() => {
+
+        const current_time = +timer.innerHTML;
+        timer.innerHTML = current_time + 1;
+
+
+    }, 1000);
+
+}
+
+window.onload = () => {
+
+    const player_name = localStorage.getItem('player');
+
+    span_player.innerHTML = player_name;
+
+    load_game();
+    start_timer();
+
+}
 
 
